@@ -59,7 +59,7 @@ function saveOne(query, callback) {
     });
 }
 
-function updateOne(query, data, callback) {
+function updateOne(query, callback) {
     const db = mysql.createConnection({
         host: 'localhost',
         user: 'root',
@@ -68,16 +68,15 @@ function updateOne(query, data, callback) {
     });
     db.connect((err) => {
         if (err) throw err;
-        id = Number(data.id);
         db.query(query, (err, result) => {
             if (err) { callback('error'); }
-            else { callback(null); }
+            else { callback(null, result); }
             db.end();
         });
     });
 }
 
-function deleteOne(query, idToDelete, callback) {
+function deleteOne(query, callback) {
     const db = mysql.createConnection({
         host: 'localhost',
         user: 'root',
@@ -86,7 +85,6 @@ function deleteOne(query, idToDelete, callback) {
     });
     db.connect((err) => {
         if (err) throw err;
-        id = Number(idToDelete);
         db.query(query, (err, result) => {
             if (err) { callback('error'); }
             else { callback(null); }

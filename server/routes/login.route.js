@@ -14,7 +14,10 @@ router.post("/", function (req, res) {
             return res.status(500).send();
         } else {
             if (_user === "error") {
-                return res.status(401).send("");
+                const data = {
+                    token: ""
+                }
+                return res.status(401).send(data);
             } else {
                 const token = jwt.sign({
                     user: user,
@@ -22,7 +25,11 @@ router.post("/", function (req, res) {
                     {
                         expiresIn: 10000
                     });
-                return res.send(token);
+                const data = {
+                    user: _user,
+                    token: token
+                }
+                return res.send(data);
             }
         }
     })

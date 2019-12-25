@@ -72,3 +72,73 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+.col-md-12{
+  margin-bottom:20px;
+}
+.card-img-top{
+  max-height: 200px;
+    cursor: pointer;
+}
+.big-image{
+  max-height: 500px;
+}
+.description{
+  max-height:100px;
+  overflow: hidden;
+  overflow-y:scroll;
+}
+.price{
+  float:right;
+  margin-top:-5px;
+  font-size: 20px;
+}
+.soc{
+  cursor: pointer;
+  margin-top:-8px;
+  font-size: 24px;
+  color: #006AC4;
+}
+.soc2{
+  font-size: 18px;
+  color: #006AC4;
+}
+.title{
+  cursor: pointer;
+  font-size: 18px;
+  color: #006AC4;
+}
+.title2{
+  font-size: 28px;
+  color: #006AC4;
+}
+.edit{
+  font-size: 24px;
+  float:right;
+}
+.edit2{
+  cursor: pointer;
+  color: rgb(0, 158, 40);
+}
+.delete{
+  cursor: pointer;
+  color: rgb(196, 46, 0);
+}
+.hello{
+  float:right;
+  margin-top:-40px;
+  font-size: 24px;
+  color: #006AC4;
+}
+.navlink{
+  cursor: pointer;
+  color: rgb(0, 128, 240);
+  font-size: 18px;
+}
+.back{
+  cursor: pointer;
+  color: rgb(0, 128, 240);
+  font-size: 20px;
+  float:right;
+  margin-top: -3px;
+  margin-right: 10px;
+}
